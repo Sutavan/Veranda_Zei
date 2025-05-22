@@ -48,8 +48,7 @@
             margin-top: 2em;
             white-space: nowrap;
             overflow: hidden;
-            box-sizing: border-box;
-            animation: scroll-text 2.5s linear infinite;
+            animation: scroll-text 3.5s linear infinite;
         }
         @keyframes scroll-text {
             0% { transform: translateX(100%); }
@@ -85,16 +84,16 @@
             margin-top: 3em;
             border: 3px solid #aaa;
             background-color: #ccc;
-            display: inline-block;
-            padding: 2em;
+            display: flex;
+            justify-content: center;
+            gap: 1.2em;
+            padding: 0.7em;
             font-weight: bold;
-            transform: scale(2);
+            font-size: 1.8em;
+            flex-wrap: wrap;
         }
         .links a {
-            display: block;
-            margin: 0.6em 0;
             text-decoration: none;
-            font-size: 1.2em;
         }
         .links a.youtube { color: red; }
         .links a.twitter { color: #1DA1F2; }
@@ -114,7 +113,7 @@
         <img src="3MA_loadingcontent.gif" alt="ロード中">
     </div>
 
-    <audio autoplay loop>
+    <audio id="bgm" loop>
         <source src="veranda_bgm.mp3" type="audio/mpeg">
     </audio>
 
@@ -158,10 +157,19 @@
     }, 1000);
   });
 
+  // 強制非表示
   setTimeout(() => {
     const splash = document.getElementById('splash');
     if (splash) splash.style.display = 'none';
   }, 1500);
+
+  // BGMはユーザーの操作があるまで再生されない対策
+  document.addEventListener('click', () => {
+    const bgm = document.getElementById('bgm');
+    if (bgm && bgm.paused) {
+      bgm.play().catch(() => {});
+    }
+  });
 </script>
 </body>
 </html>
