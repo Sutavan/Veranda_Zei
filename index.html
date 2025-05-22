@@ -134,5 +134,24 @@
     <div class="contact">
         お問い合わせは: shinverandazei@gmail.com
     </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const splash = document.getElementById('splash');
+    setTimeout(() => {
+      if (splash) {
+        splash.style.transition = 'opacity 0.5s ease';
+        splash.style.opacity = '0';
+        setTimeout(() => splash.style.display = 'none', 500);
+      }
+    }, 2000);
+  });
+
+  // Failsafe: forcibly hide splash after 3 seconds
+  setTimeout(() => {
+    const splash = document.getElementById('splash');
+    if (splash) splash.style.display = 'none';
+  }, 3000);
+</script>
 </body>
 </html>
