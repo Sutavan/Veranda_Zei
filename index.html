@@ -8,6 +8,7 @@
   <meta property="og:image" content="https://sutavan.github.io/Veranda_Zei/og_image.jpg" />
   <style>
     body {
+  overflow-x: hidden;
       margin: 0;
       padding: 0;
       font-family: sans-serif;
@@ -83,6 +84,14 @@
   </style>
 </head>
 <body>
+
+<div id="loading" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background-color: black; color: white; display: flex; align-items: center;
+  justify-content: center; flex-direction: column; z-index: 9999;">
+  <img src="3MA_loadingcontent.gif" alt="Loading" />
+  <p style="margin-top: 1em;">Enter The Veranda-Zei</p>
+</div>
+
   <div class="title">
     <span style="color: red;">‼</span>日本最後の見世物小屋<span style="color: red;">‼</span>
   </div>
@@ -92,7 +101,7 @@
   </div>
 
   <div class="section-title">【お知らせ】</div>
-  <div class="members">05/23/25 HPリニューアル‼</div>
+  <div class="members" style="color: darkred; font-size: 1.5em;">05/23/25 HPリニューアル‼</div>
 
   <div class="section-title">
     <img src="w_003.gif" alt="[笑]" style="height: 0.7em;">
@@ -114,13 +123,13 @@
     <img src="gallery3.jpg" alt="ギャラリー3">
     <img src="gallery4.jpg" alt="ギャラリー4">
     <img src="gallery5.jpg" alt="ギャラリー5">
-    <div class="return"><a href="index.html">戻る</a></div>
+    
   </div>
 
   <div class="links">
-    <a href="https://www.youtube.com/@veranda_zei" style="color: red;">YouTube</a>
-    <a href="https://x.com/veranda_zei" style="color: #1DA1F2;">Twitter</a>
-    <a href="https://www.tiktok.com/@veranda_zei" style="color: #25F4EE;">TikTok</a>
+    <a href="<a href="https://www.youtube.com/@veranda_zei" style="color: red;">YouTube</a>">YouTube</a>
+    <a href="<a href="https://x.com/veranda_zei" style="color: #1DA1F2;">Twitter</a>">Twitter</a>
+    <a href="<a href="https://www.tiktok.com/@veranda_zei" style="color: #25F4EE;">TikTok</a>">TikTok</a>
   </div>
 
   <div class="return" style="font-size: 1em;">お問い合わせは shinverandazei@gmail.com まで</div>
@@ -128,13 +137,20 @@
   
   
 
-<audio id="bgm" src="veranda_bgm.mp3" autoplay loop></audio>
+
+
+
+<audio id="bgm" src="veranda_bgm.mp3" loop></audio>
 <script>
-  window.addEventListener("load", function() {
-    const bgm = document.getElementById("bgm");
-    bgm.play().catch(() => {});
+  window.addEventListener("load", function () {
+    setTimeout(() => {
+      document.getElementById("loading").style.display = "none";
+      const bgm = document.getElementById("bgm");
+      bgm.play().catch(() => {});
+    }, 1000);
   });
 </script>
 </body>
+
 
 </html>
