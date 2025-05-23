@@ -39,6 +39,25 @@
       width: 400px;
       margin-top: 20px;
     }
+    .scroll-text {
+      margin: 20px auto;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 100%;
+    }
+    .scroll-text-inner {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left 5.5s linear infinite;
+      font-size: 100px;
+    }
+    .scroll-text-inner span {
+      font-size: 25px;
+    }
+    @keyframes scroll-left {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
     .announce {
       background: green;
       padding: 10px;
@@ -67,7 +86,6 @@
     .member img {
       width: 300px;
       height: auto;
-      max-width: 100%;
     }
     .gallery-title {
       font-size: 24px;
@@ -131,6 +149,10 @@
 
   <div class="counter">
     あなたは <img src="https://www.hitwebcounter.com/counter/counter.php?page=9947231&style=0006&nbdigits=6&type=page&initCount=190" alt="visitor counter"> 人目の訪問者です！
+  </div>
+
+  <div class="scroll-text">
+    <div class="scroll-text-inner"><span>日本最後の見世物小屋<span class="red-exclaim">‼</span></span></div>
   </div>
 
   <div class="logo">
