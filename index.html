@@ -84,7 +84,19 @@
       font-size: 1.5em;
       color: yellow;
     }
-  </style>
+  
+@keyframes memberFlash {
+  0%   { color: #ff4444; }
+  33%  { color: #ffff66; }
+  66%  { color: #66ff66; }
+  100% { color: #ff4444; }
+}
+.member-name {
+  animation: memberFlash 0.8s infinite;
+  font-weight: bold;
+}
+
+</style>
 </head>
 <body>
 
@@ -99,9 +111,7 @@
     <span style="color: red;">‼</span>日本最後の見世物小屋<span style="color: red;">‼</span>
   </div>
 
-  <div class="logo">
-    <img src="logo_light.jpg" alt="ベランダ勢ロゴ" style="max-width: 80%;">
-  </div>
+  <div class="logo" style="text-align: center;"><img src="logo_light.jpg" style="max-width: 80%; margin: 0 auto; display: block;"></div>
 
   <div class="section-title">【お知らせ】</div>
   <div class="members" style="background-color: green; text-align: left; padding: 1em; max-width: 600px; margin: auto; color: red; font-size: 1.5em;">05/23/25 HPリニューアル‼</div>
@@ -113,10 +123,10 @@
   </div>
 
   <div class="members">
-    ★小池満<br><img src="koike.jpg" alt="小池満"><br>
-    ★りゃん<br><img src="ryan.jpg" alt="りゃん"><br>
-    ★つかっちゃん<br><img src="tsukacchan.jpg" alt="つかっちゃん"><br>
-    ★仙豆りん<br><img src="senzurin.jpg" alt="仙豆りん"><br>
+    <span class="member-name">★小池満</span><br><img src="koike.jpg" alt="小池満"><br>
+    <span class="member-name">★りゃん</span><br><img src="ryan.jpg" alt="りゃん"><br>
+    <span class="member-name">★つかっちゃん</span><br><img src="tsukacchan.jpg" alt="つかっちゃん"><br>
+    <span class="member-name">★仙豆りん</span><br><img src="senzurin.jpg" alt="仙豆りん"><br>
   </div>
 
   <div class="section-title">ギャラリー</div>
@@ -130,11 +140,13 @@
   </div>
 
   
-<div class="links">
-  <a href="https://www.youtube.com/@veranda_zei" style="background-color: red; padding: 0.4em 1em; color: white; font-weight: bold; border-radius: 5px; text-decoration: none;">YouTube</a>
-  <a href="https://x.com/veranda_zei" style="background-color: #1DA1F2; padding: 0.4em 1em; color: white; font-weight: bold; border-radius: 5px; text-decoration: none;">Twitter</a>
-  <a href="https://www.tiktok.com/@veranda_zei" style="background-color: #25F4EE; padding: 0.4em 1em; color: black; font-weight: bold; border-radius: 5px; text-decoration: none;">TikTok</a>
+
+<div class="links" style="background-color: #ccc; padding: 1em; display: flex; justify-content: center; gap: 2em;">
+  <a href="https://www.youtube.com/@veranda_zei" style="color: white; background: red; padding: 0.4em 1em; font-weight: bold; text-decoration: none;">YouTube</a>
+  <a href="https://x.com/veranda_zei" style="color: white; background: #1DA1F2; padding: 0.4em 1em; font-weight: bold; text-decoration: none;">Twitter</a>
+  <a href="https://www.tiktok.com/@veranda_zei" style="color: black; background: #25F4EE; padding: 0.4em 1em; font-weight: bold; text-decoration: none;">TikTok</a>
 </div>
+
 
 
   <div class="return" style="font-size: 1em;">お問い合わせは shinverandazei@gmail.com まで</div>
