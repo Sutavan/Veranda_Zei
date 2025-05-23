@@ -8,6 +8,9 @@
   <meta property="og:image" content="https://sutavan.github.io/Veranda_Zei/og_image.jpg" />
   <style>
     body {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
   overflow-x: hidden;
       margin: 0;
       padding: 0;
@@ -101,7 +104,7 @@
   </div>
 
   <div class="section-title">【お知らせ】</div>
-  <div class="members" style="color: darkred; font-size: 1.5em;">05/23/25 HPリニューアル‼</div>
+  <div class="members" style="background-color: green; text-align: left; padding: 1em; max-width: 600px; margin: auto; color: red; font-size: 1.5em;">05/23/25 HPリニューアル‼</div>
 
   <div class="section-title">
     <img src="w_003.gif" alt="[笑]" style="height: 0.7em;">
@@ -126,11 +129,13 @@
     
   </div>
 
-  <div class="links">
-    <a href="<a href="https://www.youtube.com/@veranda_zei" style="color: red;">YouTube</a>">YouTube</a>
-    <a href="<a href="https://x.com/veranda_zei" style="color: #1DA1F2;">Twitter</a>">Twitter</a>
-    <a href="<a href="https://www.tiktok.com/@veranda_zei" style="color: #25F4EE;">TikTok</a>">TikTok</a>
-  </div>
+  
+<div class="links">
+  <a href="https://www.youtube.com/@veranda_zei" style="background-color: red; padding: 0.4em 1em; color: white; font-weight: bold; border-radius: 5px; text-decoration: none;">YouTube</a>
+  <a href="https://x.com/veranda_zei" style="background-color: #1DA1F2; padding: 0.4em 1em; color: white; font-weight: bold; border-radius: 5px; text-decoration: none;">Twitter</a>
+  <a href="https://www.tiktok.com/@veranda_zei" style="background-color: #25F4EE; padding: 0.4em 1em; color: black; font-weight: bold; border-radius: 5px; text-decoration: none;">TikTok</a>
+</div>
+
 
   <div class="return" style="font-size: 1em;">お問い合わせは shinverandazei@gmail.com まで</div>
 
@@ -140,7 +145,7 @@
 
 
 
-<audio id="bgm" src="veranda_bgm.mp3" loop></audio>
+
 <script>
   window.addEventListener("load", function () {
     setTimeout(() => {
@@ -150,7 +155,24 @@
     }, 1000);
   });
 </script>
+
+<audio id="bgm" src="veranda_bgm.mp3" autoplay loop></audio>
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    const bgm = document.getElementById("bgm");
+    bgm.muted = false;
+    const tryPlay = () => {
+      bgm.play().catch(() => {
+        document.body.addEventListener('click', () => {
+          bgm.play();
+        }, { once: true });
+      });
+    };
+    tryPlay();
+  });
+</script>
 </body>
+
 
 
 </html>
