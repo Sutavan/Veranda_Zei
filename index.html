@@ -1,110 +1,159 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <title>ベランダ勢公式サイト</title>
-    <link rel="icon" href="favicon.ico">
-    <style>
-        body {
-            margin: 0;
-            background: url('bg_light.jpg');
-            background-size: cover;
-            font-family: sans-serif;
-            color: white;
-        }
-        .logo {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .logo img {
-            width: 400px;
-        }
-        .loader {
-            width: 200px;
-            margin: 20px auto;
-            display: block;
-        }
-        .notice {
-            text-align: center;
-            background: green;
-            color: red;
-            padding: 10px;
-            font-size: 1.5em;
-        }
-        .section-title {
-            text-align: center;
-            font-size: 2em;
-            margin-top: 40px;
-        }
-        .member {
-            text-align: center;
-            margin: 30px 0;
-        }
-        .member img {
-            width: 300px;
-        }
-        .gallery {
-            text-align: center;
-            margin: 30px 0;
-        }
-        .gallery img {
-            width: 200px;
-            margin: 10px;
-        }
-        .contact {
-            position: fixed;
-            right: 10px;
-            bottom: 10px;
-            font-size: 0.9em;
-        }
-        .link-bar {
-            background: #ccc;
-            text-align: center;
-            padding: 10px 0;
-        }
-        .link-bar a {
-            margin: 0 15px;
-            padding: 10px 20px;
-            background: #444;
-            color: white;
-            text-decoration: none;
-        }
-        .blink {
-            animation: blink-animation 0.8s steps(1, start) infinite;
-        }
-        @keyframes blink-animation {
-            50% { opacity: 0; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ベランダ勢</title>
+  <link rel="icon" href="logo_light.jpg">
+  <style>
+    body {
+      margin: 0;
+      background: url('bg_light.jpg');
+      font-family: 'Arial', sans-serif;
+      color: white;
+      text-align: center;
+    }
+    #loader {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: black;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    #loader h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .logo img {
+      width: 400px;
+      margin-top: 20px;
+    }
+    .announce {
+      background: green;
+      padding: 10px;
+      margin: 20px auto;
+      max-width: 800px;
+      font-size: 24px;
+      color: red;
+      font-weight: bold;
+    }
+    .section-title {
+      font-size: 32px;
+      margin: 30px 0;
+    }
+    .member-name {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 10px 0;
+      animation: blink 0.8s infinite;
+    }
+    @keyframes blink {
+      0% { color: #ff4444; }
+      33% { color: #ffff66; }
+      66% { color: #66ff66; }
+      100% { color: #ff4444; }
+    }
+    .member img {
+      width: 300px;
+    }
+    .gallery-title {
+      font-size: 24px;
+      margin-top: 50px;
+    }
+    .gallery img {
+      display: block;
+      margin: 10px auto;
+      width: 80%;
+      max-width: 600px;
+    }
+    .social-links {
+      background: #ccc;
+      padding: 20px;
+      margin-top: 50px;
+      font-weight: bold;
+    }
+    .social-links a {
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .youtube { color: red; }
+    .twitter { color: #1DA1F2; }
+    .tiktok { color: #25F4EE; }
+    .counter {
+      font-size: 16px;
+      margin-top: 20px;
+    }
+    footer {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
-    <audio autoplay loop>
-        <source src="veranda_bgm.mp3" type="audio/mp3">
-    </audio>
-    <div class="loader"><img src="3MA_loadingcontent.gif" alt="Loading..."></div>
-    <div class="logo"><img src="logo_light.jpg" alt="ベランダ勢ロゴ"></div>
-    <div class="notice">05/23/25 HPリニューアル!!</div>
+  <div id="loader">
+    <h1>Enter The Veranda-Zei</h1>
+    <img src="3MA_loadingcontent.gif" alt="Loading Content">
+  </div>
+  <script>
+    window.addEventListener('load', function () {
+      setTimeout(() => document.getElementById('loader').style.display = 'none', 1000);
+    });
+  </script>
 
-    <div class="section-title">🌸‼成員紹介‼🌸</div>
-    <div class="member"><div class="blink">★小池満</div><img src="koike.jpg" alt=""></div>
-    <div class="member"><div class="blink">★りゃん</div><img src="ryan.jpg" alt=""></div>
-    <div class="member"><div class="blink">★仙豆りん</div><img src="senzurin.jpg" alt=""></div>
-    <div class="member"><div class="blink">★つかっちゃん</div><img src="tsukacchan.jpg" alt=""></div>
+  <audio autoplay loop>
+    <source src="veranda_bgm.mp3" type="audio/mpeg">
+  </audio>
 
-    <div class="section-title">🌸‼ギャラリー‼🌸</div>
-    <div class="gallery">
-        <img src="gallery1.jpg" alt="">
-        <img src="gallery2.jpg" alt="">
-        <img src="gallery3.jpg" alt="">
-        <img src="gallery4.jpg" alt="">
-        <img src="gallery5.jpg" alt="">
-    </div>
+  <div class="counter">
+    あなたは <img src="https://www.hitwebcounter.com/counter/counter.php?page=9947231&style=0006&nbdigits=6&type=page&initCount=190" alt="visitor counter"> 人目の訪問者です！
+  </div>
 
-    <div class="link-bar">
-        <a href="https://www.youtube.com/">YouTube</a>
-        <a href="https://www.twitter.com/">Twitter</a>
-        <a href="https://www.tiktok.com/">TikTok</a>
-    </div>
-    <div class="contact">お問い合わせは shinverandazei@gmail.com まで</div>
+  <div class="logo">
+    <img src="logo_light.jpg" alt="ベランダ勢ロゴ">
+  </div>
+
+  <div class="announce">05/23/25 HPリニューアル!!</div>
+
+  <div class="section-title">
+    <img src="w_003.gif" alt="笑">‼成員紹介‼<img src="w_003.gif" alt="笑">
+  </div>
+
+  <div class="member-name">★小池満</div>
+  <img src="koike.jpg" alt="小池満">
+
+  <div class="member-name">★りゃん</div>
+  <img src="ryan.jpg" alt="りゃん">
+
+  <div class="member-name">★仙豆りん</div>
+  <img src="senzurin.jpg" alt="仙豆りん">
+
+  <div class="member-name">★つかっちゃん</div>
+  <img src="tsukacchan.jpg" alt="つかっちゃん">
+
+  <div class="gallery-title">‼ギャラリー‼</div>
+  <div class="gallery">
+    <img src="gallery1.jpg" alt="gallery1">
+    <img src="gallery2.jpg" alt="gallery2">
+    <img src="gallery3.jpg" alt="gallery3">
+    <img src="gallery4.jpg" alt="gallery4">
+    <img src="gallery5.jpg" alt="gallery5">
+  </div>
+
+  <div class="social-links">
+    <a href="https://www.youtube.com/@veranda_zei" class="youtube">YouTube</a>
+    <a href="https://twitter.com/veranda_zei" class="twitter">Twitter</a>
+    <a href="https://www.tiktok.com/@veranda_zei" class="tiktok">TikTok</a>
+  </div>
+
+  <footer>お問い合わせは shinverandazei@gmail.com まで</footer>
 </body>
 </html>
