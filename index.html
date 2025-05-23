@@ -1,198 +1,140 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<link rel="icon" type="image/x-icon" href="favicon.ico" />
-
-<meta property="og:image" content="https://sutavan.github.io/Veranda_Zei/og_image.jpg" />
-<meta property="og:image:type" content="image/jpeg" />
-<meta property="og:image:width" content="800" />
-<meta property="og:image:height" content="800" />
-<meta property="og:title" content="ベランダ勢" />
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ベランダ勢</title>
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
-        body {
-            background-image: url('bg_light.jpg');
-            background-size: cover;
-            background-repeat: repeat;
-            font-family: sans-serif;
-            color: white;
-            text-align: center;
-            padding-bottom: 4em;
-            cursor: url('tama_06b.gif') 12 12, auto;
-        }
-        .splash {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: black;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-            color: white;
-        }
-        .splash h1 {
-            font-size: 2em;
-            margin-bottom: 1em;
-        }
-        .splash img {
-            width: 300px;
-            height: auto;
-        }
-        .title {
-            font-size: 3em;
-            font-weight: bold;
-            margin-top: 2em;
-            white-space: nowrap;
-            overflow: hidden;
-            animation: scroll-text 5.5s linear infinite;
-        }
-        @keyframes scroll-text { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
-            100% { transform: translateX(-100%); }
-        }
-        .title img {
-            vertical-align: middle;
-            height: 1.2em;
-        }
-        .title .exclam {
-            color: red;
-        }
-        .logo {
-            margin-top: 1em;
-        }
-        .section-title {
-            font-size: 2em;
-            font-weight: bold;
-            color: black;
-            margin-top: 3em;
-        }
-        .members {
-            font-size: 1.5em;
-            animation: color-blink 0.8s infinite;
-        }
-        @keyframes color-blink {
-            0% { color: #ff6666; }
-            33% { color: #ffff66; }
-            66% { color: #66ff66; }
-            100% { color: #ff6666; }
-        }
-        .links {
-            margin-top: 3em;
-            border: 3px solid #aaa;
-            background-color: #ccc;
-            display: flex;
-            justify-content: center;
-            gap: 1.2em;
-            padding: 0.7em;
-            font-weight: bold;
-            font-size: 1.8em;
-            flex-wrap: wrap;
-        }
-        .links a {
-            text-decoration: none;
-        }
-        .links a.youtube { color: red; }
-        .links a.twitter { color: #1DA1F2; }
-        .links a.tiktok { color: #000; }
-        .contact {
-            position: fixed;
-            bottom: 0.5em;
-            right: 1em;
-            font-size: 0.9em;
-            color: white;
-        }
-    
-@media screen and (max-width: 600px) {
+  <meta charset="UTF-8">
+  <title>ベランダ勢</title>
+  <meta property="og:title" content="ベランダ勢" />
+  <meta property="og:image" content="https://sutavan.github.io/Veranda_Zei/og_image.jpg" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background: url('bg_light.jpg') repeat;
+      color: white;
+      cursor: url('cursor.png'), auto;
+    }
     .title {
-        font-size: 1.8em;
+      font-size: 2.6em;
+      font-weight: bold;
+      white-space: nowrap;
+      display: inline-block;
+      min-width: 120%;
+      animation: scroll-text 5.5s linear infinite;
+      color: white;
     }
-    .logo img {
-        max-width: 90%;
-        height: auto;
+    @keyframes scroll-text {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
     }
-}
-
-</style>
+    .logo {
+      text-align: center;
+      margin-top: 1em;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2em;
+      margin: 3em 0 1em 0;
+    }
+    .members {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+    .members img {
+      width: 200px;
+      height: auto;
+      display: block;
+      margin: 0.5em auto;
+    }
+    .links {
+      background-color: #333;
+      padding: 1em;
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      font-size: 1.4em;
+    }
+    .links a {
+      color: white;
+      text-decoration: none;
+      padding: 0.2em 0.6em;
+      font-weight: bold;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+    }
+    .gallery {
+      text-align: center;
+    }
+    .gallery img {
+      width: 80%;
+      max-width: 600px;
+      margin: 1em auto;
+      display: block;
+    }
+    .return {
+      text-align: center;
+      margin: 2em;
+    }
+    .return a {
+      font-size: 1.5em;
+      color: yellow;
+    }
+  </style>
 </head>
 <body>
+  <div class="title">
+    <span style="color: red;">‼</span>日本最後の見世物小屋<span style="color: red;">‼</span>
+  </div>
 
-<div style="position: fixed; top: 0.5em; left: 1em; font-size: 0.9em; color: white; z-index: 9999;">
-  あなたは<br>
-  <img src="https://hitwebcounter.com/counter/counter.php?page=8994379&style=0006&nbdigits=5&type=page&initCount=0" title="web counter" Alt="web counter" border="0" />
-  <br>人目の訪問者です！
-</div>
+  <div class="logo">
+    <img src="logo_light.jpg" alt="ベランダ勢ロゴ" style="max-width: 80%;">
+  </div>
 
-    <div id="splash" class="splash">
-        <h1>Enter The Veranda-Zei</h1>
-        <img src="3MA_loadingcontent.gif" alt="ロード中">
-    </div>
+  <div class="section-title">【お知らせ】</div>
+  <div class="members">05/23/25 HPリニューアル‼</div>
 
-    <audio id="bgm" loop>
-        <source src="veranda_bgm.mp3" type="audio/mpeg">
-    </audio>
+  <div class="section-title">
+    <img src="w_003.gif" alt="[笑]" style="height: 0.7em;">
+    <span style="color: red;">‼</span>成員紹介<span style="color: red;">‼</span>
+    <img src="w_003.gif" alt="[笑]" style="height: 0.7em;">
+  </div>
 
-    
-    
+  <div class="members">
+    ★小池満<br><img src="koike.jpg" alt="小池満"><br>
+    ★りゃん<br><img src="ryan.jpg" alt="りゃん"><br>
+    ★つかっちゃん<br><img src="tsukacchan.jpg" alt="つかっちゃん"><br>
+    ★仙豆りん<br><img src="senzurin.jpg" alt="仙豆りん"><br>
+  </div>
 
+  <div class="section-title">ギャラリー</div>
+  <div class="gallery">
+    <img src="gallery1.jpg" alt="ギャラリー1">
+    <img src="gallery2.jpg" alt="ギャラリー2">
+    <img src="gallery3.jpg" alt="ギャラリー3">
+    <img src="gallery4.jpg" alt="ギャラリー4">
+    <img src="gallery5.jpg" alt="ギャラリー5">
+    <div class="return"><a href="index.html">戻る</a></div>
+  </div>
 
-<div class="scroll-wrapper" style="overflow: hidden; width: 100%; margin-top: 2em;"><div class="title" style="font-size: 2.6em; font-weight: bold; white-space: nowrap; display: inline-block; min-width: 120%; animation: scroll-text 5.5s linear infinite;"><span style="color: red;">‼</span>日本最後の見世物小屋<span style="color: red;">‼</span></div></div>
-<div class="logo" style="margin-bottom: 3em;">
-<img src="logo_light.jpg" alt="ベランダ勢ロゴ">
-    </div>
-    <div class="announcement" style="margin-top: 3em; background-color: #0a0; color: white; padding: 1em; text-align: left; margin-bottom: 3em;"><h2 style="text-align: center; font-size: 2em; color: white;">【お知らせ】</h2><p style="margin-left: 1em; font-size: 1.5em;"><span style="color: #8b0000;">05/23/25 HPリニューアル‼</span></p></div>
-<div class="section-title"><img src="w_003.gif" alt="[笑]" style="height: 0.7em;"><span style="color: red;">‼</span>成員紹介<span style="color: red;">‼</span><img src="w_003.gif" alt="[笑]" style="height: 0.7em;"></div>
-    <div class="members" style="margin-bottom: 3em;">
-        ★小池満<br>
-        ★りゃん<br>
-        ★つかっちゃん<br>
-        ★仙豆りん
-    </div>
-    <div class="links">
-        <a href="https://www.youtube.com/@veranda_zei" class="youtube" target="_blank">YouTube</a>
-        <a href="https://x.com/veranda_zei" class="twitter" target="_blank">Twitter</a>
-        <a href="https://www.tiktok.com/@veranda_zei" class="tiktok" target="_blank">TikTok</a>
-    </div>
-    <div class="contact">
-        お問い合わせは shinverandazei@gmail.com まで
-    </div>
+  <div class="links">
+    <a href="https://www.youtube.com/@veranda_zei" style="color: red;">YouTube</a>
+    <a href="https://x.com/veranda_zei" style="color: #1DA1F2;">Twitter</a>
+    <a href="https://www.tiktok.com/@veranda_zei" style="color: #25F4EE;">TikTok</a>
+  </div>
 
+  <div class="return" style="font-size: 1em;">お問い合わせは shinverandazei@gmail.com まで</div>
+
+  
+  
+
+<audio id="bgm" src="veranda_bgm.mp3" autoplay loop></audio>
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const splash = document.getElementById('splash');
-    setTimeout(() => {
-      if (splash) {
-        splash.style.transition = 'opacity 0.5s ease';
-        splash.style.opacity = '0';
-        setTimeout(() => splash.style.display = 'none', 500);
-      }
-    }, 1000);
-  });
-
-  // 強制非表示
-  setTimeout(() => {
-    const splash = document.getElementById('splash');
-    if (splash) splash.style.display = 'none';
-  }, 1500);
-
-  // BGMはユーザーの操作があるまで再生されない対策
-  document.addEventListener('click', () => {
-    const bgm = document.getElementById('bgm');
-    if (bgm && bgm.paused) {
-      bgm.play().catch(() => {});
-    }
+  window.addEventListener("load", function() {
+    const bgm = document.getElementById("bgm");
+    bgm.play().catch(() => {});
   });
 </script>
+</body>
 
-    </body>
 </html>
