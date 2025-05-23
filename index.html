@@ -130,7 +130,35 @@
     .red-exclaim {
       color: red;
     }
-  </style>
+  
+    .scroll-banner {
+      overflow: hidden;
+      width: 100%;
+      margin: 5px 0;
+    }
+
+    .scroll-text {
+      display: inline-block;
+      white-space: nowrap;
+      font-size: 100px;
+      animation: scroll-left 5.5s linear infinite;
+    }
+
+    @keyframes scroll-left {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .red {
+      color: red;
+    }
+
+    .member img {
+      width: 300px !important;
+      height: auto;
+    }
+    
+</style>
 </head>
 <body>
   <div id="loader">
@@ -153,6 +181,11 @@
 
   <div class="scroll-text">
     <div class="scroll-text-inner"><span>日本最後の見世物小屋<span class="red-exclaim">‼</span></span></div>
+  </div>
+
+  
+  <div class="scroll-banner">
+    <div class="scroll-text"><span class="red">‼</span>日本最後の見世物小屋<span class="red">‼</span></div>
   </div>
 
   <div class="logo">
