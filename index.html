@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ベランダ勢</title>
+  <style>
+    body {
+      background-image: url('bg_light.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      font-family: sans-serif;
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .counter {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    .scroll-banner {
+      overflow: hidden;
+      white-space: nowrap;
+      margin: 5px 0;
+    }
+
+    .scroll-text {
+      display: inline-block;
+      white-space: nowrap;
+      font-size: 100px;
+      animation: scroll-left 5.5s linear infinite;
+    }
+
+    .red-exclaim {
+      color: red;
+    }
+
+    @keyframes scroll-left {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .logo {
+      width: 400px;
+      margin: 20px auto;
+    }
+
+    .announce {
+      background-color: green;
+      color: red;
+      font-size: 30px;
+      padding: 10px;
+      margin: 20px auto;
+      width: fit-content;
+    }
+
+    .member {
+      margin: 30px 0;
+    }
+
+    .member-name {
+      font-size: 24px;
+      font-weight: bold;
+      animation: blink 0.8s infinite;
+    }
+
+    @keyframes blink {
+      0% { color: red; }
+      33% { color: yellow; }
+      66% { color: lime; }
+      100% { color: red; }
+    }
+
+    .member img {
+      width: 300px;
+      height: auto;
+      display: block;
+      margin: 10px auto;
+    }
+
+    .gallery-title {
+      font-size: 28px;
+      margin-top: 40px;
+    }
+
+    .gallery img {
+      width: 300px;
+      display: block;
+      margin: 10px auto;
+    }
+
+    .social-links {
+      background: #ccc;
+      padding: 20px;
+      margin-top: 30px;
+      font-weight: bold;
+    }
+
+    .social-links a {
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .youtube { color: red; }
+    .twitter { color: #1DA1F2; }
+    .tiktok { color: #25F4EE; }
+
+    footer {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      font-size: 14px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="counter">
+    あなたは <img src="https://www.f-counter.net/j/63/1713774650/" alt="counter"> 人目の訪問者です！
+  </div>
+
+  <div class="scroll-banner">
+    <div class="scroll-text">
+      <span class="red-exclaim">‼</span>日本最後の見世物小屋<span class="red-exclaim">‼</span>
+    </div>
+  </div>
+
+  <img src="logo_light.jpg" alt="ロゴ" class="logo">
+
+  <div class="announce">05/23/25 HPリニューアル!!</div>
+
+  <div class="member">
+    <div class="member-name">★小池満</div>
+    <img src="koike.jpg" alt="小池満">
+  </div>
+  <div class="member">
+    <div class="member-name">★りゃん</div>
+    <img src="ryan.jpg" alt="りゃん">
+  </div>
+  <div class="member">
+    <div class="member-name">★仙豆りん</div>
+    <img src="senzurin.jpg" alt="仙豆りん">
+  </div>
+  <div class="member">
+    <div class="member-name">★つかっちゃん</div>
+    <img src="tsukacchan.jpg" alt="つかっちゃん">
+  </div>
+
+  <div class="gallery-title">ギャラリー</div>
+  <div class="gallery">
+    <img src="gallery1.jpg" alt="gallery1">
+    <img src="gallery2.jpg" alt="gallery2">
+    <img src="gallery3.jpg" alt="gallery3">
+    <img src="gallery4.jpg" alt="gallery4">
+    <img src="gallery5.jpg" alt="gallery5">
+  </div>
+
+  <div class="social-links">
+    <a href="https://www.youtube.com/@veranda_zei" class="youtube">YouTube</a>
+    <a href="https://twitter.com/veranda_zei" class="twitter">Twitter</a>
+    <a href="https://www.tiktok.com/@veranda_zei" class="tiktok">TikTok</a>
+  </div>
+
+  <footer>お問い合わせは shinverandazei@gmail.com まで</footer>
+</body>
+</html>
