@@ -7,48 +7,41 @@
   <title>ベランダ勢</title>
   <style>
     body {
-      background-image: url('bg_light.jpg');
+      background: #000 url('bg_light.jpg') no-repeat center center fixed;
       background-size: cover;
-      background-attachment: fixed;
       font-family: sans-serif;
       color: white;
       text-align: center;
       margin: 0;
       padding: 0;
     }
-
     .counter {
       font-size: 20px;
       margin-top: 10px;
     }
-
     .scroll-banner {
       overflow: hidden;
       white-space: nowrap;
       margin: 5px 0;
     }
-
     .scroll-text {
       display: inline-block;
       white-space: nowrap;
       font-size: 100px;
+      font-weight: bold;
       animation: scroll-left 5.5s linear infinite;
     }
-
     .red-exclaim {
       color: red;
     }
-
     @keyframes scroll-left {
       0% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
+      100% { transform: translateX(-120%); }
     }
-
     .logo {
       width: 400px;
       margin: 20px auto;
     }
-
     .announce {
       background-color: green;
       color: red;
@@ -57,60 +50,50 @@
       margin: 20px auto;
       width: fit-content;
     }
-
     .member {
       margin: 30px 0;
     }
-
     .member-name {
       font-size: 24px;
       font-weight: bold;
       animation: blink 0.8s infinite;
     }
-
     @keyframes blink {
       0% { color: red; }
       33% { color: yellow; }
       66% { color: lime; }
       100% { color: red; }
     }
-
     .member img {
       width: 300px;
       height: auto;
       display: block;
       margin: 10px auto;
     }
-
     .gallery-title {
       font-size: 28px;
       margin-top: 40px;
     }
-
     .gallery img {
       width: 300px;
       display: block;
       margin: 10px auto;
     }
-
     .social-links {
       background: #ccc;
       padding: 20px;
       margin-top: 30px;
       font-weight: bold;
     }
-
     .social-links a {
       margin: 0 15px;
       text-decoration: none;
       font-size: 20px;
       font-weight: bold;
     }
-
     .youtube { color: red; }
     .twitter { color: #1DA1F2; }
     .tiktok { color: #25F4EE; }
-
     footer {
       position: fixed;
       bottom: 10px;
@@ -122,7 +105,7 @@
 </head>
 <body>
   <div class="counter">
-    あなたは <img src="https://www.f-counter.net/j/63/1713774650/" alt="counter"> 人目の訪問者です！
+    あなたは <img src="https://www.f-counter.net/j/65/1713845001/" alt="counter"> 人目の訪問者です！
   </div>
 
   <div class="scroll-banner">
@@ -134,6 +117,12 @@
   <img src="logo_light.jpg" alt="ロゴ" class="logo">
 
   <div class="announce">05/23/25 HPリニューアル!!</div>
+
+  <div class="section-title">
+    <img src="w_003.gif" class="laugh-gif" style="width:24px;vertical-align:middle;">
+    <img src="w_003.gif" class="laugh-gif" style="width:24px;vertical-align:middle;"><span class="red-exclaim">‼</span>成員<span class="red-exclaim">‼</span><img src="w_003.gif" class="laugh-gif" style="width:24px;vertical-align:middle;">
+    <img src="w_003.gif" class="laugh-gif" style="width:24px;vertical-align:middle;">
+  </div>
 
   <div class="member">
     <div class="member-name">★小池満</div>
