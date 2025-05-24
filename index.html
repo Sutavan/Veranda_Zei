@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -16,19 +17,16 @@
       margin: 0;
       padding: 0;
     }
-    .counter {
-      font-size: 20px;
-      padding-top: 10px;
-    }
     .scroll-banner {
       overflow: hidden;
       white-space: nowrap;
       margin: 5px 0;
+      font-weight: bold;
     }
     .scroll-text {
       display: inline-block;
       white-space: nowrap;
-      font-size: 100px;
+      font-size: 120px;
       animation: scroll-left 5.5s linear infinite;
     }
     .red-exclaim {
@@ -39,7 +37,7 @@
         transform: translateX(100%);
       }
       100% {
-        transform: translateX(-100%);
+        transform: translateX(-120%);
       }
     }
     .logo {
@@ -64,16 +62,31 @@
     }
     .member-name {
       font-size: 24px;
-      color: yellow;
-      margin-top: 10px;
+      animation: blinkColor 2.4s infinite;
+    }
+    @keyframes blinkColor {
+      0% { color: #ff8080; }
+      33% { color: yellow; }
+      66% { color: #80dfff; }
+      100% { color: #ff8080; }
+    }
+    .member-header {
+      font-size: 28px;
+      margin-top: 40px;
+    }
+    .member-header .red-exclaim {
+      font-size: 28px;
+    }
+    .fixed-contact {
+      position: fixed;
+      right: 0;
+      bottom: 10px;
+      color: white;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
-  <div class="counter">
-    あなたは <img src="https://www.f-counter.net/j/63/1713774650/" alt="counter"> 人目の訪問者です！
-  </div>
-
   <div class="scroll-banner">
     <div class="scroll-text">
       <span class="red-exclaim">‼</span>日本最後の見世物小屋<span class="red-exclaim">‼</span>
@@ -86,25 +99,29 @@
     05/23/25 HPリニューアル!!
   </div>
 
+  <div class="member-header">
+    <span class="red-exclaim">‼</span>成員紹介<span class="red-exclaim">‼</span>
+  </div>
+
   <div class="member">
     <div class="member-name">★小池満</div>
-    <img src="koike.jpg" alt="小池満">
+    <img src="koike.jpg" alt="">
   </div>
   <div class="member">
     <div class="member-name">★りゃん</div>
-    <img src="ryan.jpg" alt="りゃん">
+    <img src="ryan.jpg" alt="">
   </div>
   <div class="member">
     <div class="member-name">★仙豆りん</div>
-    <img src="senzurin.jpg" alt="仙豆りん">
+    <img src="senzurin.jpg" alt="">
   </div>
   <div class="member">
     <div class="member-name">★つかっちゃん</div>
-    <img src="tsukacchan.jpg" alt="つかっちゃん">
+    <img src="tsukacchan.jpg" alt="">
   </div>
 
-  <div class="footer">
-    お問い合わせは shinverandazei@gmail.com まで
+  <div class="fixed-contact">
+    お問い合わせ：shinverandazei@gmail.com
   </div>
 </body>
 </html>
