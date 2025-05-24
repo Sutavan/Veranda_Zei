@@ -62,7 +62,7 @@
     }
     .member-name {
       font-size: 24px;
-      animation: blinkColor 2.4s infinite;
+      animation: blinkColor 0.8s infinite;
     }
     @keyframes blinkColor {
       0% { color: #ff8080; }
@@ -84,9 +84,44 @@
       color: white;
       font-size: 14px;
     }
+    .gallery {
+      margin-top: 60px;
+    }
+    .gallery img {
+      width: 600px;
+      max-width: 90%;
+      height: auto;
+      margin: 20px auto;
+      display: block;
+    }
+    .links {
+      background-color: #d3d3d3;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    .links a {
+      display: inline-block;
+      margin: 10px 15px;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+      border-radius: 5px;
+    }
+    .yt { background-color: #FF0000; }
+    .tw { background-color: #1DA1F2; }
+    .tt { background-color: #010101; }
+    .counter-top {
+      margin-top: 15px;
+      font-size: 20px;
+    }
   </style>
 </head>
 <body>
+  <div class="counter-top">
+    あなたは <img src="https://www.f-counter.net/j/63/1713774650/" alt="counter"> 人目の訪問者です！
+  </div>
+
   <div class="scroll-banner">
     <div class="scroll-text">
       <span class="red-exclaim">‼</span>日本最後の見世物小屋<span class="red-exclaim">‼</span>
@@ -100,7 +135,7 @@
   </div>
 
   <div class="member-header">
-    <span class="red-exclaim">‼</span>成員紹介<span class="red-exclaim">‼</span>
+    <img src="w_003.gif" style="height: 1.3em; vertical-align: middle;"> <span class="red-exclaim">‼</span>成員紹介<span class="red-exclaim">‼</span> <img src="w_003.gif" style="height: 1.3em; vertical-align: middle;">
   </div>
 
   <div class="member">
@@ -118,6 +153,20 @@
   <div class="member">
     <div class="member-name">★つかっちゃん</div>
     <img src="tsukacchan.jpg" alt="">
+  </div>
+
+  <div class="gallery">
+    <div class="member-header">ギャラリー</div>
+    <img src="gallery2.jpg" alt="gallery2">
+    <img src="gallery3.jpg" alt="gallery3">
+    <img src="gallery4.jpg" alt="gallery4">
+    <img src="gallery5.jpg" alt="gallery5">
+  </div>
+
+  <div class="links">
+    <a class="yt" href="https://www.youtube.com/@veranda_zei" target="_blank">YouTube</a>
+    <a class="tw" href="https://x.com/veranda_zei" target="_blank">Twitter</a>
+    <a class="tt" href="https://www.tiktok.com/@veranda_zei" target="_blank">TikTok</a>
   </div>
 
   <div class="fixed-contact">
