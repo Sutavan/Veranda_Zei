@@ -38,12 +38,8 @@
       color: red;
     }
     @keyframes scroll-left {
-      0% {
-        transform: translateX(100%);
-      }
-      100% {
-        transform: translateX(-120%);
-      }
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-120%); }
     }
     .logo {
       width: 100%;
@@ -183,8 +179,15 @@
     05/23/25 HPリニューアル!!
   </div>
 
+  <button id="bgmBtn" onclick="playBGM()">🎵 BGM再生</button>
+  <audio id="bgm" loop>
+    <source src="veranda_bgm.mp3" type="audio/mpeg">
+  </audio>
+
   <div class="member-header">
-    <img src="w_003.gif" style="height: 1.3em; vertical-align: middle;"> <span class="red-exclaim">‼</span>成員紹介<span class="red-exclaim">‼</span> <img src="w_003.gif" style="height: 1.3em; vertical-align: middle;">
+    <img src="w_003.gif" style="height: 1.3em; vertical-align: middle;">
+    <span class="red-exclaim">‼</span>成員紹介<span class="red-exclaim">‼</span>
+    <img src="w_003.gif" style="height: 1.3em; vertical-align: middle;">
   </div>
 
   <div class="member">
@@ -206,6 +209,7 @@
 
   <div class="gallery">
     <div class="member-header">ギャラリー</div>
+    <img src="gallery1.jpg" alt="gallery1">
     <img src="gallery2.jpg" alt="gallery2">
     <img src="gallery3.jpg" alt="gallery3">
     <img src="gallery4.jpg" alt="gallery4">
@@ -217,11 +221,6 @@
     <a class="tw" href="https://x.com/veranda_zei" target="_blank">Twitter</a>
     <a class="tt" href="https://www.tiktok.com/@veranda_zei" target="_blank">TikTok</a>
   </div>
-
-  <button id="bgmBtn" onclick="playBGM()">🎵 BGM再生</button>
-  <audio id="bgm" loop>
-    <source src="veranda_bgm.mp3" type="audio/mpeg">
-  </audio>
 
   <div class="fixed-contact">
     お問い合わせは shinverandazei@gmail.com まで
